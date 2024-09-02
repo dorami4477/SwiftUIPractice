@@ -17,6 +17,7 @@ struct MbtiModel: Hashable, Identifiable {
 struct ProfileSettingView: View {
 
 @State private var isSheetPresneted = false
+@State private var isFullPresneted = false
 @State private var nickName =  ""
 @State private var isButtonActive = false
 @State private var  mbtiList = [
@@ -57,13 +58,16 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
                 }
                 .padding(.vertical)
                 Spacer()
-                NavigationLink {
-                    StartView()
+                Button {
+                    isFullPresneted = true
                 } label: {
                     BasicButton(title: "완료", active: $isButtonActive)
                 }
 
             }
+            .fullScreenCover(isPresented: $isFullPresneted, content: {
+                StartView()
+            })
             .sheet(isPresented: $isSheetPresneted, content: {
                 ProfileImageView()
             })

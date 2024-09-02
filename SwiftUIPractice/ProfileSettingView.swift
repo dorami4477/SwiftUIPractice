@@ -16,6 +16,7 @@ struct MbtiModel: Hashable, Identifiable {
 
 struct ProfileSettingView: View {
 
+@State private var isSheetPresneted = false
 @State private var nickName =  ""
 @State private var isButtonActive = false
 @State private var  mbtiList = [
@@ -30,11 +31,12 @@ struct ProfileSettingView: View {
 ]
 let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
+
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink {
-                    ProfileImageView()
+                Button {
+                    isSheetPresneted = true
                 } label: {
                     SelectedProfileImage(iamgeName: "profile_0", active: true)
                         .frame(width: 130, height: 130)
@@ -62,6 +64,9 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
                 }
 
             }
+            .sheet(isPresented: $isSheetPresneted, content: {
+                ProfileImageView()
+            })
             .padding(.horizontal, 20)
                 .navigationTitle("PROFILE SETTING")
                 .navigationBarTitleDisplayMode(.inline)

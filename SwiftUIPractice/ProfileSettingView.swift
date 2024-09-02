@@ -16,7 +16,6 @@ struct MbtiModel: Hashable, Identifiable {
 
 struct ProfileSettingView: View {
 
-@State private var isSheetPresneted = false
 @State private var isFullPresneted = false
 @State private var nickName =  ""
 @State private var isButtonActive = false
@@ -36,8 +35,8 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
     var body: some View {
         NavigationView {
             VStack {
-                Button {
-                    isSheetPresneted = true
+                NavigationLink {
+                    ProfileImageView()
                 } label: {
                     SelectedProfileImage(iamgeName: "profile_0", active: true)
                         .frame(width: 130, height: 130)
@@ -52,7 +51,7 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
                     Spacer()
                     LazyVGrid(columns: columns) {
                         ForEach($mbtiList, id: \.id) { item in
-                             Mbti(data: item)
+                            Mbti(data: item, mbtiList: $mbtiList)
                          }
                        }
                 }
@@ -67,9 +66,6 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
             }
             .fullScreenCover(isPresented: $isFullPresneted, content: {
                 StartView()
-            })
-            .sheet(isPresented: $isSheetPresneted, content: {
-                ProfileImageView()
             })
             .padding(.horizontal, 20)
                 .navigationTitle("PROFILE SETTING")
@@ -102,10 +98,17 @@ struct SelectedProfileImage: View {
 
 struct Mbti: View {
     @Binding var data: MbtiModel
+    @Binding var mbtiList: [MbtiModel]
     
     var body: some View {
         Button(action: {
-            print("버튼 클릭\(data.title)")
+            
+            for index in mbtiList.indices {
+                if mbtiList[index].pair == data.pair {
+                    mbtiList[index].active = false
+                }
+            }
+            
             data.active.toggle()
             
         }, label: {

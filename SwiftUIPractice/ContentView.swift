@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var nextButton = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack{
+                Image("launch")
+                Image("launchImage")
+                NavigationLink {
+                    ProfileSettingView()
+                } label: {
+                    BasicButton(title: "시작하기", active: $nextButton)
+                }
+            }
+            .padding(.horizontal, 20)
         }
-        .padding()
+        
     }
 }
 
 #Preview {
     ContentView()
+}
+
+struct BasicButton: View {
+    let title: String
+    @Binding var active: Bool
+    
+    var body: some View {
+        Text(title)
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(active ? .blue : .gray)
+            .clipShape(Capsule())
+    }
 }

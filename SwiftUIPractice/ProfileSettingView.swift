@@ -11,6 +11,7 @@ struct MbtiModel: Hashable, Identifiable {
     let id = UUID()
     let title: String
     var active: Bool
+    let pair: Int
 }
 
 struct ProfileSettingView: View {
@@ -18,14 +19,14 @@ struct ProfileSettingView: View {
 @State private var nickName =  ""
 @State private var isButtonActive = false
 @State private var  mbtiList = [
-    MbtiModel(title: "E", active: false),
-    MbtiModel(title: "S", active: false),
-    MbtiModel(title: "T", active: false),
-    MbtiModel(title: "J", active: false),
-    MbtiModel(title: "I", active: false),
-    MbtiModel(title: "N", active: false),
-    MbtiModel(title: "F", active: false),
-    MbtiModel(title: "P", active: false),
+    MbtiModel(title: "E", active: false, pair: 0),
+    MbtiModel(title: "S", active: false, pair: 1),
+    MbtiModel(title: "T", active: false, pair: 2),
+    MbtiModel(title: "J", active: false, pair: 3),
+    MbtiModel(title: "I", active: false, pair: 0),
+    MbtiModel(title: "N", active: false, pair: 1),
+    MbtiModel(title: "F", active: false, pair: 2),
+    MbtiModel(title: "P", active: false, pair: 3),
 ]
 let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
@@ -75,7 +76,7 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
 
 struct SelectedProfileImage: View {
     let iamgeName: String
-    let active: Bool
+    var active: Bool
     
     var body: some View {
         Image(iamgeName)
@@ -97,7 +98,7 @@ struct Mbti: View {
         Button(action: {
             print("버튼 클릭\(data.title)")
             data.active.toggle()
-
+            
         }, label: {
             Text(data.title)
                 .foregroundStyle(data.active ? .white : .gray)

@@ -10,15 +10,23 @@ import SwiftUI
 struct SearchView: View {
     @State private var search = ""
     @State private var markets: Markets = []
+    var filteredData: Markets {
+        return search.isEmpty ? markets : markets.filter{$0.koreanName.contains(search)}
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(markets, id: \.self) { item in
-                    rowView(item)
+                ForEach(filteredData, id: \.self) { item in
+                    NavigationLink {
+                        SearchNextView(title: item.koreanName)
+                    } label: {
+                        rowView(item)
+                    }
                 }
-                .searchable(text: $search)
-            .navigationTitle("Search")
             }
+            .searchable(text: $search)
+            .navigationTitle("Search")
         }
         .task {
             do {

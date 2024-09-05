@@ -8,29 +8,40 @@
 import SwiftUI
 
 struct MyRamdomImageView: View {
+    @State private var sectionList = [
+        "첫번째 섹션",
+        "두번째 섹션",
+        "세번째 섹션",
+        "네번째 섹션"
+    ]
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(0..<5) { item in
-                    horizontalImages("\(item + 1) 섹션")
+                ForEach($sectionList, id: \.self) { $item in
+                    horizontalImages($item)
                 }
             }
             .navigationTitle("My Ramdom Image")
         }
     }
     
-    func horizontalImages(_ title: String) -> some View {
+    func horizontalImages(_ title: Binding<String>) -> some View {
         VStack{
-            Text(title)
+            Text(title.wrappedValue)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             ScrollView(.horizontal){
                 LazyHStack{
                     ForEach(0..<7) { item in
+                        let url = URL(string: "https://picsum.photos/200/300")
+                        
                         NavigationLink {
-                            ImageDetailView()
+                            ImageDetailView(title: title.wrappedValue, imageURL: url) { newTitle in
+                                title.wrappedValue = newTitle
+                            }
                         } label: {
-                            PosterView()
+                            PosterView(url: url)
                                 .clipShape(RoundedRectangle(cornerRadius: 25))
                         }
                     }

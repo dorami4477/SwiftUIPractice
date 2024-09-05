@@ -33,7 +33,6 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
 
 
     var body: some View {
-        NavigationView {
             VStack {
                 NavigationLink {
                     ProfileImageView()
@@ -71,7 +70,6 @@ let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible(
                 .navigationTitle("PROFILE SETTING")
                 .navigationBarTitleDisplayMode(.inline)
         }
-    }
     
 }
 

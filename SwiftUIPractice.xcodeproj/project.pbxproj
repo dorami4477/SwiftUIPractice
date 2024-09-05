@@ -18,6 +18,8 @@
 		4857A95F2C8746EF00BC8F0D /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */; };
 		4857A9612C874AD100BC8F0D /* SearchNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9602C874AD100BC8F0D /* SearchNextView.swift */; };
 		4857A9672C89EF6100BC8F0D /* MyRamdomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */; };
+		4857A96A2C89F50100BC8F0D /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9692C89F50100BC8F0D /* PosterView.swift */; };
+		4857A96C2C89FBE200BC8F0D /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A96B2C89FBE100BC8F0D /* ImageDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 		4857A9602C874AD100BC8F0D /* SearchNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNextView.swift; sourceTree = "<group>"; };
 		4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRamdomImageView.swift; sourceTree = "<group>"; };
+		4857A9692C89F50100BC8F0D /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
+		4857A96B2C89FBE100BC8F0D /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */,
+				4857A9692C89F50100BC8F0D /* PosterView.swift */,
+				4857A96B2C89FBE100BC8F0D /* ImageDetailView.swift */,
 			);
 			path = MyRamdomImage;
 			sourceTree = "<group>";
@@ -185,8 +191,10 @@
 				4857A94C2C85736900BC8F0D /* ProfileSettingView.swift in Sources */,
 				4857A9402C85724D00BC8F0D /* ContentView.swift in Sources */,
 				4857A9512C858A9E00BC8F0D /* ProfileImageView.swift in Sources */,
+				4857A96C2C89FBE200BC8F0D /* ImageDetailView.swift in Sources */,
 				4857A93E2C85724D00BC8F0D /* SwiftUIPracticeApp.swift in Sources */,
 				4857A95D2C8743A400BC8F0D /* SearchView.swift in Sources */,
+				4857A96A2C89F50100BC8F0D /* PosterView.swift in Sources */,
 				4857A95F2C8746EF00BC8F0D /* UpbitAPI.swift in Sources */,
 				4857A94E2C85856F00BC8F0D /* StartView.swift in Sources */,
 				4857A9612C874AD100BC8F0D /* SearchNextView.swift in Sources */,

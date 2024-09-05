@@ -17,6 +17,7 @@
 		4857A95D2C8743A400BC8F0D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A95C2C8743A400BC8F0D /* SearchView.swift */; };
 		4857A95F2C8746EF00BC8F0D /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */; };
 		4857A9612C874AD100BC8F0D /* SearchNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9602C874AD100BC8F0D /* SearchNextView.swift */; };
+		4857A9672C89EF6100BC8F0D /* MyRamdomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4857A95C2C8743A400BC8F0D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 		4857A9602C874AD100BC8F0D /* SearchNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNextView.swift; sourceTree = "<group>"; };
+		4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRamdomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +65,12 @@
 		4857A93C2C85724D00BC8F0D /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				4857A9682C89EF9300BC8F0D /* SignUp */,
+				4857A9652C89EF3200BC8F0D /* MyRamdomImage */,
+				4857A9642C89EEDF00BC8F0D /* SearchUpbit */,
 				4857A93D2C85724D00BC8F0D /* SwiftUIPracticeApp.swift */,
-				4857A9502C858A9E00BC8F0D /* ProfileImageView.swift */,
-				4857A94B2C85736900BC8F0D /* ProfileSettingView.swift */,
-				4857A94D2C85856F00BC8F0D /* StartView.swift */,
-				4857A93F2C85724D00BC8F0D /* ContentView.swift */,
 				4857A9412C85724F00BC8F0D /* Assets.xcassets */,
 				4857A9432C85724F00BC8F0D /* Preview Content */,
-				4857A95C2C8743A400BC8F0D /* SearchView.swift */,
-				4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */,
-				4857A9602C874AD100BC8F0D /* SearchNextView.swift */,
 			);
 			path = SwiftUIPractice;
 			sourceTree = "<group>";
@@ -83,6 +81,35 @@
 				4857A9442C85724F00BC8F0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4857A9642C89EEDF00BC8F0D /* SearchUpbit */ = {
+			isa = PBXGroup;
+			children = (
+				4857A95C2C8743A400BC8F0D /* SearchView.swift */,
+				4857A95E2C8746EF00BC8F0D /* UpbitAPI.swift */,
+				4857A9602C874AD100BC8F0D /* SearchNextView.swift */,
+			);
+			path = SearchUpbit;
+			sourceTree = "<group>";
+		};
+		4857A9652C89EF3200BC8F0D /* MyRamdomImage */ = {
+			isa = PBXGroup;
+			children = (
+				4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */,
+			);
+			path = MyRamdomImage;
+			sourceTree = "<group>";
+		};
+		4857A9682C89EF9300BC8F0D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4857A9502C858A9E00BC8F0D /* ProfileImageView.swift */,
+				4857A94B2C85736900BC8F0D /* ProfileSettingView.swift */,
+				4857A94D2C85856F00BC8F0D /* StartView.swift */,
+				4857A93F2C85724D00BC8F0D /* ContentView.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +190,7 @@
 				4857A95F2C8746EF00BC8F0D /* UpbitAPI.swift in Sources */,
 				4857A94E2C85856F00BC8F0D /* StartView.swift in Sources */,
 				4857A9612C874AD100BC8F0D /* SearchNextView.swift in Sources */,
+				4857A9672C89EF6100BC8F0D /* MyRamdomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

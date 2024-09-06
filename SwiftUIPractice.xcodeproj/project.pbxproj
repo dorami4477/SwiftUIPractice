@@ -20,6 +20,7 @@
 		4857A9672C89EF6100BC8F0D /* MyRamdomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */; };
 		4857A96A2C89F50100BC8F0D /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A9692C89F50100BC8F0D /* PosterView.swift */; };
 		4857A96C2C89FBE200BC8F0D /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A96B2C89FBE100BC8F0D /* ImageDetailView.swift */; };
+		4857A96F2C8A92BB00BC8F0D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857A96E2C8A92BB00BC8F0D /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4857A9662C89EF6100BC8F0D /* MyRamdomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRamdomImageView.swift; sourceTree = "<group>"; };
 		4857A9692C89F50100BC8F0D /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		4857A96B2C89FBE100BC8F0D /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		4857A96E2C8A92BB00BC8F0D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		4857A93C2C85724D00BC8F0D /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				4857A96D2C8A921600BC8F0D /* CategoryView */,
 				4857A9682C89EF9300BC8F0D /* SignUp */,
 				4857A9652C89EF3200BC8F0D /* MyRamdomImage */,
 				4857A9642C89EEDF00BC8F0D /* SearchUpbit */,
@@ -116,6 +119,14 @@
 				4857A93F2C85724D00BC8F0D /* ContentView.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4857A96D2C8A921600BC8F0D /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				4857A96E2C8A92BB00BC8F0D /* CategoryView.swift */,
+			);
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			files = (
 				4857A94C2C85736900BC8F0D /* ProfileSettingView.swift in Sources */,
 				4857A9402C85724D00BC8F0D /* ContentView.swift in Sources */,
+				4857A96F2C8A92BB00BC8F0D /* CategoryView.swift in Sources */,
 				4857A9512C858A9E00BC8F0D /* ProfileImageView.swift in Sources */,
 				4857A96C2C89FBE200BC8F0D /* ImageDetailView.swift in Sources */,
 				4857A93E2C85724D00BC8F0D /* SwiftUIPracticeApp.swift in Sources */,
